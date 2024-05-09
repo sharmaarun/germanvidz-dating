@@ -13,7 +13,7 @@ I have created this project using MVC (although I wish I did it from the beginni
 
 # Installation steps:
  
-[first run this script on your sql script in phpmyadmin](scripts/rushi_project.sql)
+[first run this script on your sql script in phpmyadmin](scripts/demo_project.sql)
 
 - then clone this directory and put inside your htdocs folder.
 
