@@ -21,7 +21,7 @@ if (isset($_GET['message'])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Minder</title>
+    <title>GermanVidz</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/tinder-icon-bar.svg">
     <link rel="stylesheet" href="css/styleMain.css">
 
@@ -30,86 +30,86 @@ if (isset($_GET['message'])) {
 <nav>
     <div class="logo">
         <img src="img/tinder-icon@2x.png" alt="logo">
-        <p>minder</p>
+        <p>Germanvidz</p>
     </div>
     <div class="navbar">
-        <button id="openLoginModal" class="navbar_item"> Login</button>
-        <button id="openProfileModal" class="navbar_item"> Profiles</button>
+        <button id="openLoginModal" class="navbar_item"> Anmeldung</button>
+        <button id="openProfileModal" class="navbar_item"> Profile</button>
     </div>
     <div class="body-writing">
-        <p> You never know where a Swipe might take you.™ </p>
-        <button id="openSignupButton" class="join_button"> Sign Up</button>
+        <p> Sie wissen nie, wohin ein Schlag Sie führen könnte.™ </p>
+        <button id="openSignupButton" class="join_button"> Melden Sie sich an</button>
     </div>
 </nav>
 
 <div id="login-modal">
     <div class="modal-header">
-        <div class="modal-title">Login</div>
+        <div class="modal-title">Anmeldung</div>
         <div id="login-modal-close-button">&times;</div>
     </div>
     <form action="../Controller/LoginController.php" method="post">
         <div class="modal-body">
             <div class="form-input">
-                <label for="email">User Id : </label>
+                <label for="email">Benutzer-ID : </label>
                 <input type="email" name="id" required>
             </div>
             <div class="form-input">
-                <label for="password"> Password : </label>
+                <label for="password"> Passwort : </label>
                 <input type="password" name="password" required>
             </div>
-            <button class="login-modal-button" type="submit" value="Login">Login</button>
+            <button class="login-modal-button" type="submit" value="Login">Anmeldung</button>
         </div>
     </form>
 </div>
 
 <div id="signup-modal">
     <div class="modal-header">
-        <div class="modal-title">Sign up</div>
+        <div class="modal-title">Melden Sie sich an</div>
         <div id="signup-modal-close-button">&times;</div>
     </div>
     <form action="../Controller/SignUpController.php" method="post" enctype="multipart/form-data">
         <div class="modal-body">
             <div class="form-input">
-                <label for="email">User Id : </label>
+                <label for="email">Benutzer-ID : </label>
                 <input type="email" name="id" required>
             </div>
             <div class="form-input">
-                <label for="password"> Password : </label>
+                <label for="password"> Passwort : </label>
                 <input type="password" required name="password">
             </div>
             <div class="form-input">
-                <label for="firstName"> First-Name : </label>
+                <label for="firstName"> Vorname : </label>
                 <input type="text" required maxlength="30" name="firstName">
             </div>
             <div class="form-input">
-                <label for="lastName"> Last-Name : </label>
+                <label for="lastName"> Familienname, Nachname : </label>
                 <input type="text" required maxlength="30" name="lastName">
             </div>
             <div class="form-input">
-                <label for="age"> Age : </label>
+                <label for="age"> Alter : </label>
                 <input type="number" max="100" min="18" required name="age">
             </div>
             <div class="form-input">
-                <label for="about"> About You : </label>
+                <label for="about"> Über dich : </label>
                 <input type="text" required maxlength="300" name="about">
             </div>
             <div class="form-input">
-                <label for="profilePic"> Profile Pic : </label>
+                <label for="profilePic"> Profilbild : </label>
                 <input type="file" required name="profilePic">
             </div>
             <div class="form-input-gender">
-                <label for="gender"> Gender : </label>
-                <input type="radio" name="gender" value="male" style="padding: 0; margin: 10px;"> Male
-                <input type="radio" name="gender" value="female" style="padding: 0; margin: 10px;"> Female
+                <label for="gender"> Geschlecht : </label>
+                <input type="radio" name="gender" value="male" style="padding: 0; margin: 10px;"> Männlich
+                <input type="radio" name="gender" value="female" style="padding: 0; margin: 10px;"> Weiblich
             </div>
-            <button class="login-modal-button" type="submit" value="Login">Signup</button>
+            <button class="login-modal-button" type="submit" value="Login">Melden Sie sich an</button>
         </div>
     </form>
 </div>
 <?php for ($i = 0; $i < count($users); $i++) { ?>
     <div id="<?= $i+1 ?>" class="profile_modal">
         <div class="modal-header">
-            <div class="modal-title"> Profiles</div>
+            <div class="modal-title"> Profile</div>
             <div class="close-btn" id="profile-close-button">&times;</div>
         </div>
         <div class="modal-body">
