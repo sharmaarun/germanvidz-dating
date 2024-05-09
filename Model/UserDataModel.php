@@ -185,7 +185,7 @@ class UserDataModel
 
     public function getTopFive()
     {
-        $sql = "SELECT count(w.to_user), w.to_user as 'user', u.firstName as 'firstName', u.lastName as 'lastName', u.about as 'about', u.age as 'age', u.profilePicUrl as 'profilePicUrl' FROM wink as W JOIN users u on u.id = W.to_user GROUP BY w.to_user ORDER BY COUNT(w.to_user) DESC ;";
+        $sql = "SELECT count(w.to_user), w.to_user as 'user', u.firstName as 'firstName', u.lastName as 'lastName', u.about as 'about', u.age as 'age', u.profilePicUrl as 'profilePicUrl' FROM wink as w JOIN users u on u.id = w.to_user GROUP BY w.to_user ORDER BY COUNT(w.to_user) DESC ;";
         $data = $this->connection->query($sql)->fetchAll();
 //        $data = $stmt->fetchAll();
 
